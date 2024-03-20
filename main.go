@@ -7,4 +7,5 @@ import (
 func main() {
 	//Chapter 1
 	tutorial.HelloWorld()
+	tutorial.CliArgs()
 }
