@@ -22,24 +22,32 @@ func CliArgs(){
 	arg := os.Args[1:]
 	fmt.Println("Args[1:] ", arg)
 
+	Echo1()
+	Echo2()
+	Echo3()
+}
 
-	fmt.Println("\nEcho Clones")
+func Echo1(){
 	var s, sep string
 	for i := 1 ; i<len(os.Args) ; i++ {
 		s += sep + os.Args[i]
 		sep = " "
 	}
 	fmt.Printf("ECHO#1: %s", s)
-
+}
+func Echo2(){
 	s2, sep2 := "", ""
 	for _,arg := range os.Args[1:] {
 		s2 += sep2 + arg
 		sep2 = " "
 	}
-	fmt.Printf("\nECHO#2: %s", s2)
-
+	fmt.Println("\n" + os.Args[0])
+	fmt.Printf("ECHO#2: %s", s2)
+}
+func Echo3(){
 	fmt.Printf("\nECHO#3: ")
 	fmt.Println(strings.Join(os.Args[1:], " "))	
 	//strings.Join() concats the elements of first arg to create a single string. The second param is a seperator placed 
 	//between those elements.
+
 }
