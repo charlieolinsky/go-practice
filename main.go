@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
+	"github.com/charlieolinsky/go-practice/tutorial"
 )
 
-func main(){
-	fmt.Println("Hello World!")
+func main() {
+	//Chapter 1
+	tutorial.HelloWorld()
 }
