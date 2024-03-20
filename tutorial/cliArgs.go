@@ -16,8 +16,10 @@ func CliArgs(){
 	// if n is omitted it defaults to len(s)
 
 	fmt.Println("\nCommand Line Arguments: ")
+	argZ := os.Args[0]
+	fmt.Println("Args[0]   " + argZ)
 	arg := os.Args[1:]
-	fmt.Println(arg)
+	fmt.Println("Args[1:] ", arg)
 
 
 	fmt.Println("\nEcho Clones")
@@ -27,5 +29,12 @@ func CliArgs(){
 		sep = " "
 	}
 	fmt.Printf("ECHO#1: %s", s)
+
+	s2, sep2 := "", ""
+	for _,arg := range os.Args[1:] {
+		s2 += sep2 + arg
+		sep2 = " "
+	}
+	fmt.Printf("\nECHO#2: %s", s2)
 
 }
