@@ -20,7 +20,7 @@ func CliArgs(){
 	argZ := os.Args[0]
 	fmt.Println("Args[0]   " + argZ)
 	arg := os.Args[1:]
-	fmt.Println("Args[1:] ", arg)
+	fmt.Println("Args[1:]", arg)
 
 	Echo1()
 	Echo2()
@@ -28,6 +28,8 @@ func CliArgs(){
 }
 
 func Echo1(){
+
+	fmt.Println()
 	var s, sep string
 	for i := 1 ; i<len(os.Args) ; i++ {
 		s += sep + os.Args[i]
@@ -37,9 +39,9 @@ func Echo1(){
 }
 func Echo2(){
 	s2, sep2 := "", ""
-	for _,arg := range os.Args[1:] {
-		s2 += sep2 + arg
+	for i, arg := range os.Args[1:] {	
 		sep2 = " "
+		s2 += fmt.Sprintf("\n%s%s%d", arg, sep2, i)
 	}
 	fmt.Println("\n" + os.Args[0])
 	fmt.Printf("ECHO#2: %s", s2)
