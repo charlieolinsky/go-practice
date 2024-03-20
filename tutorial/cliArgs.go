@@ -3,6 +3,7 @@ package tutorial
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func CliArgs(){
@@ -37,4 +38,8 @@ func CliArgs(){
 	}
 	fmt.Printf("\nECHO#2: %s", s2)
 
+	fmt.Printf("\nECHO#3: ")
+	fmt.Println(strings.Join(os.Args[1:], " "))	
+	//strings.Join() concats the elements of first arg to create a single string. The second param is a seperator placed 
+	//between those elements.
 }
