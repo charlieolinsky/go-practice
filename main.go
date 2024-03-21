@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/charlieolinsky/go-practice/ch1"
+	"github.com/charlieolinsky/go-practice/chapters/ch1"
 )
 
 func main() {
