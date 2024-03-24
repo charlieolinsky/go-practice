@@ -27,7 +27,10 @@ func main() {
 	// 	log.Fatal(err)
 	// }
 
-	//1.5: Fetching a URL
+	//1.5/1.6: Fetching a URL + Concurrently
 	//ch1.Fetch()
-	ch1.FetchAll()
+	//ch1.FetchAll()
+
+	//1.7: A Web Server
+	ch1.Server()
 }
