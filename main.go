@@ -1,9 +1,6 @@
 package main
 
 import (
-	"log"
-	"os"
-
 	"github.com/charlieolinsky/go-practice/chapters/ch1"
 )
 
@@ -20,13 +17,16 @@ func main() {
 	//ch1.Dup()
 
 	//1.4: Animated Gifs
-	file, err := os.Create("gif-out.gif")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-	err = ch1.Gif(file)
-	if err != nil {
-		log.Fatal(err)
-	}
+	// file, err := os.Create("gif-out.gif")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// defer file.Close()
+	// err = ch1.Gif(file)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	//1.5: Fetching a URL
+	ch1.Fetch()
 }
