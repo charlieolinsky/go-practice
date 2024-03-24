@@ -10,8 +10,8 @@ import (
 func Dup() {
 	fmt.Println("\nFinding Duplicate Lines")
 	//Dup1()
-	//Dup2()
-	Dup3()
+	Dup2()
+	//Dup3()
 }
 
 // Dup1 prints the text of each line that appears more than
