@@ -12,11 +12,11 @@ func Dup() {
 	Dup2()
 }
 
-// Dup1 prints the text of each line that appears more than 
+// Dup1 prints the text of each line that appears more than
 // once in the standard input, preceded by its count.
 //Note: to send EOF signal to scanner press Ctrl+Z, Enter (in windows)
 func Dup1() {
-	counts := make(map[string]int)  //make() creates a new empty map
+	counts := make(map[string]int)      //make() creates a new empty map
 	input := bufio.NewScanner(os.Stdin) //Scanner breaks input into lines
 
 	// Scan() method returns true or false if there is another line
@@ -33,20 +33,21 @@ func Dup1() {
 
 	fmt.Println("Counts Map: ", counts)
 }
+
 // This version can read from the standard input or from a seqeunce of named files
 // Note, there is a file called text.txt in /test to use
 func Dup2() {
 	counts := make(map[string]int)
 	//Takes file name from Args
-	files := os.Args[1:]	
+	files := os.Args[1:]
 
 	if len(files) == 0 {
 		countLines(os.Stdin, counts)
 	} else {
 		for _, file := range files {
-			f, err := os.Open(file) // os.Open() returns both an open file (*os.File), the second is an error 
-			
-			//if something went wrong display the error	
+			f, err := os.Open(file) // os.Open() returns both an open file (*os.File), the second is an error
+
+			//if something went wrong display the error
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "ERR_DUP2: %v\n", err)
 				continue
@@ -64,10 +65,8 @@ func Dup2() {
 }
 func countLines(f *os.File, counts map[string]int) {
 	input := bufio.NewScanner(f)
-	for input.Scan(){
+	for input.Scan() {
 		counts[input.Text()]++
 	}
 	//NOTE: ignoring potential errors from input.Err()
 }
-
-
