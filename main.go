@@ -28,5 +28,6 @@ func main() {
 	// }
 
 	//1.5: Fetching a URL
-	ch1.Fetch()
+	//ch1.Fetch()
+	ch1.FetchAll()
 }
