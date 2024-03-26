@@ -1,0 +1,41 @@
+Variables
+
+General Variable Form:
+
+    ** var name type = expression **
+
+    Note: either the type or expression part may be omitted but not both:
+
+    ** var name type **
+
+    or
+
+    ** var name = expression **
+
+    Are both valid.
+
+When type is omitted, it is determined by the initializer expression. When the expression is omitted, it is set to the zero value for the type.
+
+In Go there is no such thing as an uninitialized variable. 
+
+It is possible to declare and initialize a set of variables in a single declaration:
+
+** var i, j, k type **
+** var b, f, s = true, 2.3, "four" **
+
+A set of variables can be initialized by calling a function that returns multiple values:
+
+** var f, err = os.Open(name) **
+
+
+Within a function, you may use a Short Variable Declaration. 
+
+** name := expression **
+
+Where the type of the name is determined by the expression
+You can also do this with multiple variables
+
+** i, j := 0, 1 **
+
+
+

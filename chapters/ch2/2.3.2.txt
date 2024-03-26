@@ -1,0 +1,15 @@
+Pointers
+
+&x - returns the "Address of x" as a pointer. 
+
+Important Example:
+
+x := 1
+p := &x // p, of type *int, points to x
+fmt.Println(*p) // "1"
+*p = 2 // equivalent to x = 2
+fmt.Println(x) // "2"
+
+
+The zero value of a pointer is nil
+
