@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/charlieolinsky/go-practice/chapters/ch2"
+	"github.com/charlieolinsky/go-practice/chapters/ch4"
 )
 
 func main() {
@@ -35,5 +35,9 @@ func main() {
 	//ch1.Server()
 
 	/* Chapter 2: Program Structure */
-	ch2.Echo4()
+	//ch2.Echo4()
+
+	/* Chapter 4: Composite Types */
+	//ch4.Arrays()
+	ch4.Slices()
 }
