@@ -1,0 +1,17 @@
+This subsection was dedicated to names and discussed some simple naming conventions within go as well as some scope rules that the name implies.
+
+The key points were:
+
+All names must begin with a letter
+Most names are done in camel case (ex. parseInt)
+
+An entity created within a function is local to that function. A variable created outside of a function is available across 
+all files in the entire package.
+
+The case of the first letter of a name determines its visibility across packages. IF the name begins with a capital letter, it is exported. 
+Meaning it is visible and accessible outside of its own package and may be referred to by other parts of the program. 
+(ex. func TestFunction( {...}))
+
+package names are always lowercase
+
+**The letters of acronyms should always be in the same case. (Ex. you can say, html-escape or HTMLEscape, but not escapeHtml)
