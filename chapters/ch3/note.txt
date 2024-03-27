@@ -1,0 +1,4 @@
+
+Chapter 3 was very technical and introduced a lot of deep specifics about data types in Go. 
+Although the information is very useful, I believe a lot of it to be things I will need to learn in 
+practice and not through reading.
