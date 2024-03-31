@@ -33,7 +33,45 @@ func Slices() {
 	/* Lets define an overlapping slice. Both contain the month June */
 	Q2 := months[4:7]
 	summer := months[6:9]
-	fmt.Println(Q2)
-	fmt.Println(summer)
+	fmt.Println("Q2: ", Q2)
+	fmt.Println("Summer: ", summer)
 
+	// the len() function returns the number of elements in a given slice
+	fmt.Println("Summer Len: ", len(summer))
+	// the cap() function returns the distance between the start of the slice and the end of the underlying array.
+	fmt.Println("Summer Cap: ", cap(summer))
+
+	//Slicing beyond cap(s) causes a panic
+	//fmt.Println(summer[:20])
+
+	//but slicing beyond len(s) extends the slice.
+	//Therefore, the result may be longer than the original
+	endlessSummer := summer[:7] //extend a slice within capacity
+	fmt.Println("Endless Summer: ", endlessSummer)
+
+	//Passing a slice to a function permits the function to modify the underlying array elements
+	a := [...]int{0, 1, 2, 3, 4, 5}
+	reverse(a[:])
+	fmt.Println("Reverse: ", a) // [5, 4, 3, 2, 1]
+
+	//Rotate the array left by two positions
+	q := []int{0, 1, 2, 3, 4, 5}
+
+	fmt.Println("Rotate (OG): ", q)
+	reverse(q[:2])
+	fmt.Println("Rotate (Step 1): ", q)
+	reverse(q[2:])
+	fmt.Println("Rotate (Step 2): ", q)
+	reverse(q) //do this first to rotate right
+	fmt.Println("Rotate (FINAL): ", q)
+
+	/* Slices are not comparable using == */
+	// The only legal slice comparison is against nil
+}
+
+//Cool for loop!
+func reverse(s []int) {
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
 }
